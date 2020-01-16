@@ -1,15 +1,9 @@
 export function getRandomThrow() {
-    const randomGenerator = Math.floor(Math.random() * 3);
-      
-    if (randomGenerator === 0) {
-        return "rock";
-    }
-        else if (randomGenerator === 1) {
-        return "paper";
-    }
-        else if (randomGenerator === 2) {
-        return "scissors";
-    }
+    const randomGenerator = Math.floor(Math.random() * 3); 
+    if (randomGenerator === 0) return "rock";
+    else if (randomGenerator === 1) return "paper";
+    else if (randomGenerator === 2) return "scissors";
+    
 
 };
 

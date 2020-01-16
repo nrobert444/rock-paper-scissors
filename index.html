@@ -13,29 +13,32 @@
             <h2>How to Play</h2>
             <p>Click the image to select rock, paper, or scissors and play against the computer. In case you've never played: Paper beats Rock, Rock beats Scissors and Scissors beats paper. </p>
 
-            <label>
+            <label id="rock">
                 Rock
                 <input name="rps" value="rock" type="radio" checked />
                 <img src="http://images.clipartpanda.com/rock-clipart-902949015-cartoon-rock.jpg" width=100px>
             </label>
-            <label>
+            <label id="paper">
                 Paper
                 <input name="rps" value="paper" type="radio"/>
                 <img src="http://www.clker.com/cliparts/6/5/d/d/12408471771447666572PrinterKiller_Paper.svg.hi.png" width=100px>
             </label>
-            <label>
+            <label id='scissors'>
                 Scissors
                 <input name="rps" value="scissors" type="radio"/>
                 <img src="https://image.shutterstock.com/image-vector/metal-scissors-blue-handlessewing-tailoring-260nw-619566383.jpg" width=100px>
             </label>
             <div id="win-loss-draw">
-                You won <span id="user-win"></span> times!
-                You lost <span id="user-loss"></span> times.
-                You ended in a draw <span id="user-draw"></span> times.
+                You won <span id="user-win">_</span> times!
+                You lost <span id="user-loss">_</span> times.
+                You ended in a draw <span id="user-draw">_</span> times.
             </div>
             <div id='button-div'>
                 <button id=play-button>Play</button>
                 <button id="reset-button">Reset</button>
+            </div>
+            <div id="show-message-div">
+                <span id="show-message"></span>
             </div>
         
 

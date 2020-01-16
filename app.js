@@ -6,59 +6,50 @@ const resetButton = document.getElementById('reset-button');
 const displayWinSpan = document.getElementById('user-win');
 const displayLossSpan = document.getElementById('user-loss');
 const displayDrawSpan = document.getElementById('user-draw');
-const player = {
-    win: 0,
-    loss: 0,
-    draw: 0
-};
-
-let win = 0;
-let loss = 0;
-let draw = 0;
+const resultDisplay = document.getElementById('show-message');
+const player = { win: 0, loss: 0, draw: 0 };
 
 playButton.addEventListener('click', () => {
     const computerChoice = getRandomThrow();
-    const userGuess = document.querySelector('input:checked').value;
+    let userGuess = document.querySelector('input:checked').value;
     const gameResult = checkResults(userGuess, computerChoice);
+    showMessage('');
     console.log(gameResult);
     if (gameResult === 'win') {
         player.win++;
-        displayWinSpan.textContent = win;
+        displayWinSpan.textContent = player.win;
+        showMessage('You Win!')
+        console.log(player)
     } else if (gameResult === 'loss') {
         player.loss++;
-        displayLossSpan.textContent = loss;
+        displayLossSpan.textContent = player.loss;
+        showMessage('You Lose!')
+        console.log(player)
     } else if (gameResult === 'draw') {
         player.draw++;
-        displayDrawSpan.textContent = draw;
+        displayDrawSpan.textContent = player.draw;
+        console.log(player)
     }
-    
-
 });
+
+function showMessage(msg) {
+    resultDisplay.style.visibility = 'visible';
+    resultDisplay.textContent = msg
+  }
+
 
 resetButton.addEventListener('click', () => {
     resetGame();
 });
 
-// function resetGame() {
-//     displayWinSpan.style.visibility = 'hidden';
-//     displayLossSpan.style.visibility = 'hidden';
-//     displayDrawSpan.style.visibility = 'hidden';
+ function resetGame() {
+    displayWinSpan.textContent = "";
+    displayLossSpan.textContent = ""; 
+    displayDrawSpan.textContent = ""; 
+    player.win = 0;
+    player.lose = 0;
+    player.draw = 0;
+    showMessage('');
     
 
-    
-
-//};
-
-// function showWinLossDraw() {
-//     const gameResult = checkResults(userGuess, computerChoice);
-//     if (gameResult === 'win') {
-//     win++;
-//     displayWinSpan.textContent = win;
-//     } else if (gameResult === 'loss') {
-//         loss++;
-//         displayLossSpan.textContent = loss;
-//     } else {
-//         draw++;
-//         displayDrawSpan.textContent = draw;
-//     }
-// };
+ };
