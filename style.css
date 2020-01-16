@@ -1,3 +1,11 @@
+body {
+    background-color: darkgray;
+}
+
+li {
+    font-weight: bold;
+}
+
 #button-div {
     margin: 20px;
 }
@@ -9,4 +17,13 @@ header {
     text-align: center;
     font-weight: bold;
 
+}
+#win-loss-draw {
+    padding-top: 30px;
+}
+#show-win-image, #show-lose-image {
+    display: none;
+}
+#show-message {
+    font-size: 48px;
 }

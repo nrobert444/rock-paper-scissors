@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+<body>
     <main>
         <header>Rock, Paper, Scissors Game</header>
-            <h2>How to Play</h2>
-            <p>Click the image to select rock, paper, or scissors and play against the computer. In case you've never played: Paper beats Rock, Rock beats Scissors and Scissors beats paper. </p>
+            <h1>How to Play</h1>
+            <h2>Click the image to select rock, paper, or scissors and play against the computer. In case you've never played:</h2>
+                <ul>
+                    <li>Paper beats Rock</li>
+                    <li>Rock beats Scissors</li>
+                    <li>Scissors beats paper</li>
+                </ul>
 
             <label id="rock">
                 Rock
@@ -37,23 +43,16 @@
                 <button id=play-button>Play</button>
                 <button id="reset-button">Reset</button>
             </div>
-            <div id="show-message-div">
+            <div id="show-win-image">
+                <img src="https://cdn5.vectorstock.com/i/1000x1000/20/74/you-win-poster-with-prize-cup-vector-17052074.jpg" width=500px height=30%>
+            </div>
+            <div id="show-lose-image">
+                <img src="https://image.shutterstock.com/image-vector/you-lose-red-stamp-text-260nw-303609539.jpg" width=500px height=30%>
+            </div>
+            <div>
                 <span id="show-message"></span>
             </div>
-        
-
-        
-
-
-
-
-
-
     </main>
-
-<body>
-
     <script type="module" src="app.js"></script>
 </body>
-
 </html>
