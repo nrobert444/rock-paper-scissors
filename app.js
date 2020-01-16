@@ -12,22 +12,26 @@ let win = 0;
 let loss = 0;
 let draw = 0;
 
+//show win/lose message
 function showMessage(msg) {
     resultDisplay.style.visibility = 'visible';
     resultDisplay.textContent = msg
 };
 
+//show win image
 function showWinLossImage(result) {
     if (result === 'win') return resultWinImage.style.display = 'inline-block';
     else if (result === 'loss') return resultLoseImage.style.display = 'inline-block';
     else return;
 };
 
+//show lose image
 function hideWinLossImage() {
     resultWinImage.style.display = 'none';
     resultLoseImage.style.display = 'none';
 };
 
+//resets win/lose/draw counts and hides messages/images
 function resetGame() {
     displayWinSpan.textContent = "";
     displayLossSpan.textContent = ""; 
@@ -39,6 +43,8 @@ function resetGame() {
     hideWinLossImage();
 };
 
+
+//takes results of running game shows win/lose message and images, updates counts
 function outcome(result) {
     if (result === 'win') {
         win++;
@@ -57,6 +63,7 @@ function outcome(result) {
     }
 };
 
+//gets random throw from computer and user input and checks result before calling outcome function.
 function runGame() {
     const computerChoice = getRandomThrow();
     const userGuess = document.querySelector('input:checked').value;
@@ -66,10 +73,12 @@ function runGame() {
     outcome(gameResult);
 };
 
+//reset button
 resetButton.addEventListener('click', () => {
     resetGame();
 });
 
+//play button
 playButton.addEventListener('click', () => {
     runGame();
 });
