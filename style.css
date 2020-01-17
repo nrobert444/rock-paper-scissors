@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: darkgray;
+}
+
+li {
+    display: inline;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 50px;
+}
+#input-image {
+    display: inline;
+    margin: 225px;
+    width: 150px;
+    height: 150px;
+}
+
+#input-image, img {
+    border: solid 10px transparent;
+    border-radius: 100%;
+}
+#input-image img:hover {
+    border: solid 10px blue;
+}
+
+#button-div {
+    margin: 20px;
+}
+#play-button:hover, #reset-button:hover, #rock:hover, #paper:hover, #scissors:hover {
+    cursor: pointer;
+}
+header {
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    background-color: darkgoldenrod;
+    padding: 3rem;
+
+}
+#win-loss-draw {
+    padding: 10px;
+    margin-top: 10px;
+    border: solid 5px darkgoldenrod;
+    border-radius: 15%;
+    width: 20%;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 20px;
+    color: forestgreen;
+}
+#show-win-image, #show-lose-image {
+    display: none;
+}
+#show-message {
+    font-size: 48px;
+    font-family: Arial;
+
+}
+#play-button, #reset-button {
+    box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+	background-color:#77d42a;
+	border-radius:6px;
+	border:1px solid #268a16;
+	display:inline-block;
+	cursor:pointer;
+	color:#306108;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #aade7c; 
+}
