@@ -3,8 +3,6 @@ export function getRandomThrow() {
     if (randomGenerator === 0) return "rock";
     else if (randomGenerator === 1) return "paper";
     else if (randomGenerator === 2) return "scissors";
-    
-
 };
 
 export function checkResults(player, computer) {
